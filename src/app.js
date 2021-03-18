@@ -127,11 +127,11 @@ app.listen(3000,()=>{
     console.log('server is up on port 3000')
 })
 
-
+console.log(__dirname);
 //http://localhost:3000
 
 
-//console.log(__dirname);
+
 //console.log(__filename);
 
 
