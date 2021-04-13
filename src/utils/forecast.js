@@ -6,12 +6,12 @@ const forecast=(latitude,longitude,callback)=>{
     request({url,json:true},(error,{body})=>{
      //   console.log(url);
     if(error)
-        callback("Unable to connect to weather fetching services!!",undefined)
+        callback("Unable to connect to weather fetching services!!",undefined,undefined)
     else if(body.error){
-        callback("Unable to search weather for the given location",undefined)
+        callback("Unable to search weather for the given location",undefined,undefined)
     } 
     else{
-        callback(undefined,body.current.temperature)
+        callback(undefined,body.current.temperature,body.location.region)
     }
 
     })
