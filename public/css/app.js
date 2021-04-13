@@ -36,7 +36,8 @@ weather_form.addEventListener('submit',(e)=>{
 //Now time to display the location and forecast of the address(either on console or on intput field)
 messageOne.textContent="Loading..."
 messageTwo.textContent=""
-fetch("http://localhost:3000/weather?address="+location).then((response)=>{
+//removing the http://localhost:3000 for deployment for heroku
+fetch("/weather?address="+location).then((response)=>{
   response.json().then((data)=>{
     if(data.error){
       //console.log(data.error);
